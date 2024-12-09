@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #00BCD4, #F44336);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* 메뉴바가 좌측 정렬되도록 변경 */
+        .header {
+            background-color: #D3D3D3;
+            height: 5vh;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* 메뉴를 왼쪽으로 정렬 */
+            align-items: center;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .download-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .download-option {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            width: 180px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transform: skewY(-5deg);
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .download-option:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: skewY(0deg);
+        }
+
+        .download-option h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .download-option button {
+            padding: 10px 20px;
+            font-size: 14px;
+            background-color: #FFC107;
+            color: black;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-option button:hover {
+            background-color: #FF9800;
+        }
+
+        .download-option img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .download-options {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="gamelogo.svg" alt="Logo">
+        <div class="nav">
+            <a href="index.html">HOME</a>
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="download.html">DOWNLOAD</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Download Your Version</h1>
+        <p>Choose your operating system and start your journey.</p>
+
+        <div class="download-options">
+            <div class="download-option">
+                <img src="mac_icon.svg" alt="Mac Icon">
+                <h2>Mac</h2>
+                <button onclick="window.location.href='mac_download_link_here'">다운로드하기</button>
+            </div>
+
+            <div class="download-option">
+                <img src="windows_icon.svg" alt="Windows 32-bit Icon">
+                <h2>Windows 32-bit</h2>
+                <button onclick="window.location.href='windows_32bit_download_link_here'">다운로드하기</button>
+            </div>
+
+            <div class="download-option">
+                <img src="windows_icon.svg" alt="Windows 64-bit Icon">
+                <h2>Windows 64-bit</h2>
+                <button onclick="window.location.href='windows_64bit_download_link_here'">다운로드하기</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
